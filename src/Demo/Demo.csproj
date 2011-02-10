@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99DBC040-059B-4B28-9807-29BA964B9693}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LiqPayDemo</RootNamespace>
+    <AssemblyName>Demo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\build\LiqPayClient\Debug\Demo</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\build\LiqPayClient\Release\Demo</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Mono.Posix" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gtk-gui\gui.stetic">
+      <LogicalName>gui.stetic</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gtk-gui\generated.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DialogHelper.cs" />
+    <Compile Include="ViewExchangeRatesWidget.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.ViewExchangeRatesWidget.cs" />
+    <Compile Include="ViewBalanceWidget.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.ViewBalanceWidget.cs" />
+    <Compile Include="SendMoneyWidget.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.SendMoneyWidget.cs" />
+    <Compile Include="ViewTransactionWidget.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.ViewTransactionWidget.cs" />
+    <Compile Include="UserSettings.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.MainWindow.cs" />
+    <Compile Include="PhoneCreditWidget.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.PhoneCreditWidget.cs" />
+    <Compile Include="ClickNBuyWidget.cs" />
+    <Compile Include="gtk-gui\LiqPayDemo.ClickNBuyWidget.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiqPayClient\LiqPayClient.csproj">
+      <Project>{0E360BF3-2CE8-4BB8-A489-DDF2C0CBBCB1}</Project>
+      <Name>LiqPayClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
