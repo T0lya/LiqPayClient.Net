@@ -315,16 +315,18 @@ namespace Magnis.Web.Services.LiqPay
 	/// </summary>
     public class ViewTransactionResponse : Response
     {
-        protected const string MerchantIdNodeName    = "merchant_id";
-        protected const string TransactionNodeName   = "transaction";
-        protected const string TransactionIdNodeName = "id";
-        protected const string AmountNodeName        = "amount";
-        protected const string CurrencyNodeName      = "currency";
-        protected const string DescriptionNodeName   = "description";
-        protected const string OrderIdNodeName       = "order_id";
-        protected const string FromNodeName          = "from";
-        protected const string ToNodeName            = "to";
-        protected const string ReferrerUrlNodeName   = "referer_url";
+        protected const string MerchantIdNodeName    		= "merchant_id";
+        protected const string TransactionNodeName   		= "transaction";
+        protected const string TransactionIdNodeName 		= "id";
+		protected const string FailureTransactionIdNodeName	= "transaction_id";
+        protected const string AmountNodeName        		= "amount";
+        protected const string CurrencyNodeName      		= "currency";
+        protected const string DescriptionNodeName   		= "description";
+        protected const string OrderIdNodeName       		= "order_id";
+		protected const string FailureOrderIdNodeName		= "transaction_order_id";
+        protected const string FromNodeName          		= "from";
+        protected const string ToNodeName            		= "to";
+        protected const string ReferrerUrlNodeName   		= "referer_url";
 		
 		/// <summary>
 		/// Gets merchant identifier.
@@ -351,25 +353,49 @@ namespace Magnis.Web.Services.LiqPay
             {
                 MerchantId = xml.Element(MerchantIdNodeName).Value.Trim()
             };
-            XElement transactionElement = xml.Element(TransactionNodeName);
-            if (transactionElement != null)
-            {
-                Transaction transaction = new Transaction();
-                transaction.Id				   = transactionElement.Element(TransactionIdNodeName).Value.Trim();
-                transaction.OrderId			   = transactionElement.Element(OrderIdNodeName).Value.Trim();
-                transaction.Amount             = double.Parse(transactionElement.Element(AmountNodeName).Value.Trim(), CultureInfo.InvariantCulture);
-                transaction.Currency           = transactionElement.Element(CurrencyNodeName).Value.Trim();
-                transaction.Description        = transactionElement.Element(DescriptionNodeName).Value.Trim();
-                transaction.From               = transactionElement.Element(FromNodeName).Value.Trim();
-                transaction.To                 = transactionElement.Element(ToNodeName).Value.Trim();
-                transaction.RefererAddress     = transactionElement.Element(ReferrerUrlNodeName).Value.Trim();
-                response.TransactionInfo = transaction;
-            }
-            else
-                throw new LiqPayException(ErrorCode.ResponseIsNotWellFormed, "Transaction element is not found in the response.", xml.ToString());
+			string status = xml.Element(StatusNodeName).Value.Trim();
+			if (status.Equals(ActionStatus.Success))
+			{
+	            XElement transactionElement = xml.Element(TransactionNodeName);
+	            if (transactionElement != null)
+	            	response.TransactionInfo = ParseSuccessTransaction(transactionElement);
+	            else
+	                throw new LiqPayException(ErrorCode.ResponseIsNotWellFormed, "Transaction element is not found in the response.", xml.ToString());
+			}
+			else
+				response.TransactionInfo = ParseFailureTransaction(xml);
 
             return response;
         }
+		
+		protected static Transaction ParseSuccessTransaction(XContainer xml)
+		{
+			Transaction transaction = new Transaction()
+			{
+            	Id				   = xml.Element(TransactionIdNodeName).Value.Trim(),
+            	OrderId			   = xml.Element(OrderIdNodeName).Value.Trim(),
+            	Description        = xml.Element(DescriptionNodeName).Value.Trim(),
+				Amount             = double.Parse(xml.Element(AmountNodeName).Value.Trim(), CultureInfo.InvariantCulture),
+            	Currency           = xml.Element(CurrencyNodeName).Value.Trim(),
+            	From               = xml.Element(FromNodeName).Value.Trim(),
+            	To                 = xml.Element(ToNodeName).Value.Trim(),
+            	RefererAddress     = xml.Element(ReferrerUrlNodeName).Value.Trim()
+			};
+			
+			return transaction;
+		}
+		
+		protected static Transaction ParseFailureTransaction(XContainer xml)
+		{
+			Transaction transaction = new Transaction()
+			{
+            	Id				   = xml.Element(FailureTransactionIdNodeName).Value.Trim(),
+            	OrderId			   = xml.Element(FailureOrderIdNodeName).Value.Trim(),
+            	Description        = xml.Element(ResponseDescriptionNodeName).Value.Trim(),
+			};
+			
+			return transaction;
+		}
     }
 	
 	

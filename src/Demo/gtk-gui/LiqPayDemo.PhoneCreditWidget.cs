@@ -5,31 +5,18 @@ namespace LiqPayDemo
 	public partial class PhoneCreditWidget
 	{
 		private global::Gtk.Table contentTable;
-
 		private global::Gtk.Entry amountEntry;
-
 		private global::Gtk.Label amountLabel;
-
 		private global::Gtk.Button creditButton;
-
 		private global::Gtk.ComboBoxEntry currencyComboBox;
-
 		private global::Gtk.Label currencyLabel;
-
 		private global::Gtk.Entry merchantIdEntry;
-
 		private global::Gtk.Label merchantIdLabel;
-
 		private global::Gtk.Entry orderIdEntry;
-
 		private global::Gtk.Label orderIdLabel;
-
 		private global::Gtk.Entry phoneEntry;
-
 		private global::Gtk.Label phoneLabel;
-
 		private global::Gtk.Entry pwdEntry;
-
 		private global::Gtk.Label pwdLabel;
 
 		protected virtual void Build ()
@@ -50,7 +37,7 @@ namespace LiqPayDemo
 			this.amountEntry.IsEditable = true;
 			this.amountEntry.InvisibleChar = '●';
 			this.contentTable.Add (this.amountEntry);
-			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.contentTable[this.amountEntry]));
+			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.contentTable [this.amountEntry]));
 			w1.TopAttach = ((uint)(3));
 			w1.BottomAttach = ((uint)(4));
 			w1.LeftAttach = ((uint)(1));
@@ -60,10 +47,10 @@ namespace LiqPayDemo
 			// Container child contentTable.Gtk.Table+TableChild
 			this.amountLabel = new global::Gtk.Label ();
 			this.amountLabel.Name = "amountLabel";
-			this.amountLabel.Xalign = 1f;
+			this.amountLabel.Xalign = 1F;
 			this.amountLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Amount:");
 			this.contentTable.Add (this.amountLabel);
-			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.contentTable[this.amountLabel]));
+			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.contentTable [this.amountLabel]));
 			w2.TopAttach = ((uint)(3));
 			w2.BottomAttach = ((uint)(4));
 			w2.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -75,7 +62,7 @@ namespace LiqPayDemo
 			this.creditButton.UseUnderline = true;
 			this.creditButton.Label = global::Mono.Unix.Catalog.GetString ("Credit");
 			this.contentTable.Add (this.creditButton);
-			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.contentTable[this.creditButton]));
+			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.contentTable [this.creditButton]));
 			w3.TopAttach = ((uint)(6));
 			w3.BottomAttach = ((uint)(7));
 			w3.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -84,7 +71,7 @@ namespace LiqPayDemo
 			this.currencyComboBox = global::Gtk.ComboBoxEntry.NewText ();
 			this.currencyComboBox.Name = "currencyComboBox";
 			this.contentTable.Add (this.currencyComboBox);
-			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.contentTable[this.currencyComboBox]));
+			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.contentTable [this.currencyComboBox]));
 			w4.TopAttach = ((uint)(4));
 			w4.BottomAttach = ((uint)(5));
 			w4.LeftAttach = ((uint)(1));
@@ -93,10 +80,10 @@ namespace LiqPayDemo
 			// Container child contentTable.Gtk.Table+TableChild
 			this.currencyLabel = new global::Gtk.Label ();
 			this.currencyLabel.Name = "currencyLabel";
-			this.currencyLabel.Xalign = 1f;
+			this.currencyLabel.Xalign = 1F;
 			this.currencyLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Currency:");
 			this.contentTable.Add (this.currencyLabel);
-			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.contentTable[this.currencyLabel]));
+			global::Gtk.Table.TableChild w5 = ((global::Gtk.Table.TableChild)(this.contentTable [this.currencyLabel]));
 			w5.TopAttach = ((uint)(4));
 			w5.BottomAttach = ((uint)(5));
 			w5.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -108,7 +95,7 @@ namespace LiqPayDemo
 			this.merchantIdEntry.IsEditable = true;
 			this.merchantIdEntry.InvisibleChar = '●';
 			this.contentTable.Add (this.merchantIdEntry);
-			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.contentTable[this.merchantIdEntry]));
+			global::Gtk.Table.TableChild w6 = ((global::Gtk.Table.TableChild)(this.contentTable [this.merchantIdEntry]));
 			w6.LeftAttach = ((uint)(1));
 			w6.RightAttach = ((uint)(2));
 			w6.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -116,10 +103,10 @@ namespace LiqPayDemo
 			// Container child contentTable.Gtk.Table+TableChild
 			this.merchantIdLabel = new global::Gtk.Label ();
 			this.merchantIdLabel.Name = "merchantIdLabel";
-			this.merchantIdLabel.Xalign = 1f;
+			this.merchantIdLabel.Xalign = 1F;
 			this.merchantIdLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Merchant ID:");
 			this.contentTable.Add (this.merchantIdLabel);
-			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.contentTable[this.merchantIdLabel]));
+			global::Gtk.Table.TableChild w7 = ((global::Gtk.Table.TableChild)(this.contentTable [this.merchantIdLabel]));
 			w7.XOptions = ((global::Gtk.AttachOptions)(4));
 			w7.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child contentTable.Gtk.Table+TableChild
@@ -129,7 +116,7 @@ namespace LiqPayDemo
 			this.orderIdEntry.IsEditable = true;
 			this.orderIdEntry.InvisibleChar = '●';
 			this.contentTable.Add (this.orderIdEntry);
-			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.contentTable[this.orderIdEntry]));
+			global::Gtk.Table.TableChild w8 = ((global::Gtk.Table.TableChild)(this.contentTable [this.orderIdEntry]));
 			w8.TopAttach = ((uint)(5));
 			w8.BottomAttach = ((uint)(6));
 			w8.LeftAttach = ((uint)(1));
@@ -139,10 +126,10 @@ namespace LiqPayDemo
 			// Container child contentTable.Gtk.Table+TableChild
 			this.orderIdLabel = new global::Gtk.Label ();
 			this.orderIdLabel.Name = "orderIdLabel";
-			this.orderIdLabel.Xalign = 1f;
+			this.orderIdLabel.Xalign = 1F;
 			this.orderIdLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Order ID:");
 			this.contentTable.Add (this.orderIdLabel);
-			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.contentTable[this.orderIdLabel]));
+			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.contentTable [this.orderIdLabel]));
 			w9.TopAttach = ((uint)(5));
 			w9.BottomAttach = ((uint)(6));
 			w9.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -154,7 +141,7 @@ namespace LiqPayDemo
 			this.phoneEntry.IsEditable = true;
 			this.phoneEntry.InvisibleChar = '●';
 			this.contentTable.Add (this.phoneEntry);
-			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.contentTable[this.phoneEntry]));
+			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.contentTable [this.phoneEntry]));
 			w10.TopAttach = ((uint)(2));
 			w10.BottomAttach = ((uint)(3));
 			w10.LeftAttach = ((uint)(1));
@@ -164,10 +151,10 @@ namespace LiqPayDemo
 			// Container child contentTable.Gtk.Table+TableChild
 			this.phoneLabel = new global::Gtk.Label ();
 			this.phoneLabel.Name = "phoneLabel";
-			this.phoneLabel.Xalign = 1f;
+			this.phoneLabel.Xalign = 1F;
 			this.phoneLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Phone:");
 			this.contentTable.Add (this.phoneLabel);
-			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.contentTable[this.phoneLabel]));
+			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.contentTable [this.phoneLabel]));
 			w11.TopAttach = ((uint)(2));
 			w11.BottomAttach = ((uint)(3));
 			w11.XOptions = ((global::Gtk.AttachOptions)(4));
@@ -179,7 +166,7 @@ namespace LiqPayDemo
 			this.pwdEntry.IsEditable = true;
 			this.pwdEntry.InvisibleChar = '●';
 			this.contentTable.Add (this.pwdEntry);
-			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.contentTable[this.pwdEntry]));
+			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.contentTable [this.pwdEntry]));
 			w12.TopAttach = ((uint)(1));
 			w12.BottomAttach = ((uint)(2));
 			w12.LeftAttach = ((uint)(1));
@@ -189,10 +176,10 @@ namespace LiqPayDemo
 			// Container child contentTable.Gtk.Table+TableChild
 			this.pwdLabel = new global::Gtk.Label ();
 			this.pwdLabel.Name = "pwdLabel";
-			this.pwdLabel.Xalign = 1f;
+			this.pwdLabel.Xalign = 1F;
 			this.pwdLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Password:");
 			this.contentTable.Add (this.pwdLabel);
-			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.contentTable[this.pwdLabel]));
+			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.contentTable [this.pwdLabel]));
 			w13.TopAttach = ((uint)(1));
 			w13.BottomAttach = ((uint)(2));
 			w13.XOptions = ((global::Gtk.AttachOptions)(4));

@@ -5,13 +5,9 @@ namespace LiqPayDemo
 	public partial class ViewExchangeRatesWidget
 	{
 		private global::Gtk.VBox contentVBox;
-
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
-
 		private global::Gtk.TextView exchangeRatesTextView;
-
 		private global::Gtk.HButtonBox buttonBox;
-
 		private global::Gtk.Button refreshButton;
 
 		protected virtual void Build ()
@@ -35,7 +31,7 @@ namespace LiqPayDemo
 			this.exchangeRatesTextView.Editable = false;
 			this.GtkScrolledWindow.Add (this.exchangeRatesTextView);
 			this.contentVBox.Add (this.GtkScrolledWindow);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.contentVBox[this.GtkScrolledWindow]));
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.contentVBox [this.GtkScrolledWindow]));
 			w2.Position = 0;
 			// Container child contentVBox.Gtk.Box+BoxChild
 			this.buttonBox = new global::Gtk.HButtonBox ();
@@ -48,11 +44,11 @@ namespace LiqPayDemo
 			this.refreshButton.UseUnderline = true;
 			this.refreshButton.Label = global::Mono.Unix.Catalog.GetString ("Refresh");
 			this.buttonBox.Add (this.refreshButton);
-			global::Gtk.ButtonBox.ButtonBoxChild w3 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.buttonBox[this.refreshButton]));
+			global::Gtk.ButtonBox.ButtonBoxChild w3 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.buttonBox [this.refreshButton]));
 			w3.Expand = false;
 			w3.Fill = false;
 			this.contentVBox.Add (this.buttonBox);
-			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.contentVBox[this.buttonBox]));
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.contentVBox [this.buttonBox]));
 			w4.Position = 1;
 			w4.Expand = false;
 			w4.Fill = false;

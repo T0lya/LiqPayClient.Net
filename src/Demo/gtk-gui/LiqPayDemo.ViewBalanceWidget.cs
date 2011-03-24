@@ -5,23 +5,14 @@ namespace LiqPayDemo
 	public partial class ViewBalanceWidget
 	{
 		private global::Gtk.VBox contentVBox;
-
 		private global::Gtk.Table table3;
-
 		private global::Gtk.Entry merchantIdEntry;
-
 		private global::Gtk.Label merchantIdLabel;
-
 		private global::Gtk.Entry pwdEntry;
-
 		private global::Gtk.Label pwdLabel;
-
 		private global::Gtk.ScrolledWindow GtkScrolledWindow1;
-
 		private global::Gtk.TextView balanceTextView;
-
 		private global::Gtk.HButtonBox viewBalanceButtonBox;
-
 		private global::Gtk.Button refreshBalanceButton;
 
 		protected virtual void Build ()
@@ -46,18 +37,18 @@ namespace LiqPayDemo
 			this.merchantIdEntry.IsEditable = true;
 			this.merchantIdEntry.InvisibleChar = '●';
 			this.table3.Add (this.merchantIdEntry);
-			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table3[this.merchantIdEntry]));
+			global::Gtk.Table.TableChild w1 = ((global::Gtk.Table.TableChild)(this.table3 [this.merchantIdEntry]));
 			w1.LeftAttach = ((uint)(1));
 			w1.RightAttach = ((uint)(2));
 			w1.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table3.Gtk.Table+TableChild
 			this.merchantIdLabel = new global::Gtk.Label ();
 			this.merchantIdLabel.Name = "merchantIdLabel";
-			this.merchantIdLabel.Xalign = 1f;
+			this.merchantIdLabel.Xalign = 1F;
 			this.merchantIdLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Merchant ID:");
 			this.merchantIdLabel.Justify = ((global::Gtk.Justification)(1));
 			this.table3.Add (this.merchantIdLabel);
-			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table3[this.merchantIdLabel]));
+			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table3 [this.merchantIdLabel]));
 			w2.XOptions = ((global::Gtk.AttachOptions)(4));
 			w2.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table3.Gtk.Table+TableChild
@@ -67,7 +58,7 @@ namespace LiqPayDemo
 			this.pwdEntry.IsEditable = true;
 			this.pwdEntry.InvisibleChar = '●';
 			this.table3.Add (this.pwdEntry);
-			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table3[this.pwdEntry]));
+			global::Gtk.Table.TableChild w3 = ((global::Gtk.Table.TableChild)(this.table3 [this.pwdEntry]));
 			w3.TopAttach = ((uint)(1));
 			w3.BottomAttach = ((uint)(2));
 			w3.LeftAttach = ((uint)(1));
@@ -76,17 +67,17 @@ namespace LiqPayDemo
 			// Container child table3.Gtk.Table+TableChild
 			this.pwdLabel = new global::Gtk.Label ();
 			this.pwdLabel.Name = "pwdLabel";
-			this.pwdLabel.Xalign = 1f;
+			this.pwdLabel.Xalign = 1F;
 			this.pwdLabel.LabelProp = global::Mono.Unix.Catalog.GetString ("Password:");
 			this.pwdLabel.Justify = ((global::Gtk.Justification)(1));
 			this.table3.Add (this.pwdLabel);
-			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table3[this.pwdLabel]));
+			global::Gtk.Table.TableChild w4 = ((global::Gtk.Table.TableChild)(this.table3 [this.pwdLabel]));
 			w4.TopAttach = ((uint)(1));
 			w4.BottomAttach = ((uint)(2));
 			w4.XOptions = ((global::Gtk.AttachOptions)(4));
 			w4.YOptions = ((global::Gtk.AttachOptions)(4));
 			this.contentVBox.Add (this.table3);
-			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.contentVBox[this.table3]));
+			global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.contentVBox [this.table3]));
 			w5.Position = 0;
 			w5.Expand = false;
 			w5.Fill = false;
@@ -101,7 +92,7 @@ namespace LiqPayDemo
 			this.balanceTextView.Editable = false;
 			this.GtkScrolledWindow1.Add (this.balanceTextView);
 			this.contentVBox.Add (this.GtkScrolledWindow1);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.contentVBox[this.GtkScrolledWindow1]));
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.contentVBox [this.GtkScrolledWindow1]));
 			w7.Position = 1;
 			// Container child contentVBox.Gtk.Box+BoxChild
 			this.viewBalanceButtonBox = new global::Gtk.HButtonBox ();
@@ -114,11 +105,11 @@ namespace LiqPayDemo
 			this.refreshBalanceButton.UseUnderline = true;
 			this.refreshBalanceButton.Label = global::Mono.Unix.Catalog.GetString ("Refresh");
 			this.viewBalanceButtonBox.Add (this.refreshBalanceButton);
-			global::Gtk.ButtonBox.ButtonBoxChild w8 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.viewBalanceButtonBox[this.refreshBalanceButton]));
+			global::Gtk.ButtonBox.ButtonBoxChild w8 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.viewBalanceButtonBox [this.refreshBalanceButton]));
 			w8.Expand = false;
 			w8.Fill = false;
 			this.contentVBox.Add (this.viewBalanceButtonBox);
-			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.contentVBox[this.viewBalanceButtonBox]));
+			global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.contentVBox [this.viewBalanceButtonBox]));
 			w9.Position = 2;
 			w9.Expand = false;
 			w9.Fill = false;

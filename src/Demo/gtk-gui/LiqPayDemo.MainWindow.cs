@@ -5,29 +5,17 @@ namespace LiqPayDemo
 	public partial class MainWindow
 	{
 		private global::Gtk.Notebook actionsNotebook;
-
 		private global::LiqPayDemo.ViewExchangeRatesWidget viewExchangeRatesWidget;
-
 		private global::Gtk.Label exchangeActionLabel;
-
 		private global::LiqPayDemo.ViewBalanceWidget viewBalanceWidget;
-
 		private global::Gtk.Label viewBalanceLabel;
-
 		private global::LiqPayDemo.SendMoneyWidget sendMoneyWidget;
-
 		private global::Gtk.Label sendMoneyPageLabel;
-
 		private global::LiqPayDemo.ViewTransactionWidget viewTransactionWidget;
-
 		private global::Gtk.Label viewTransactionPageLabel;
-
 		private global::LiqPayDemo.PhoneCreditWidget phoneCreditWidget;
-
 		private global::Gtk.Label phoneCreditLabel;
-
 		private global::LiqPayDemo.ClickNBuyWidget clicknbuyWidget;
-
 		private global::Gtk.Label clicknbuyLabel;
 
 		protected virtual void Build ()
@@ -58,7 +46,7 @@ namespace LiqPayDemo
 			this.viewBalanceWidget.Events = ((global::Gdk.EventMask)(256));
 			this.viewBalanceWidget.Name = "viewBalanceWidget";
 			this.actionsNotebook.Add (this.viewBalanceWidget);
-			global::Gtk.Notebook.NotebookChild w2 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook[this.viewBalanceWidget]));
+			global::Gtk.Notebook.NotebookChild w2 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook [this.viewBalanceWidget]));
 			w2.Position = 1;
 			// Notebook tab
 			this.viewBalanceLabel = new global::Gtk.Label ();
@@ -71,7 +59,7 @@ namespace LiqPayDemo
 			this.sendMoneyWidget.Events = ((global::Gdk.EventMask)(256));
 			this.sendMoneyWidget.Name = "sendMoneyWidget";
 			this.actionsNotebook.Add (this.sendMoneyWidget);
-			global::Gtk.Notebook.NotebookChild w3 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook[this.sendMoneyWidget]));
+			global::Gtk.Notebook.NotebookChild w3 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook [this.sendMoneyWidget]));
 			w3.Position = 2;
 			// Notebook tab
 			this.sendMoneyPageLabel = new global::Gtk.Label ();
@@ -84,7 +72,7 @@ namespace LiqPayDemo
 			this.viewTransactionWidget.Events = ((global::Gdk.EventMask)(256));
 			this.viewTransactionWidget.Name = "viewTransactionWidget";
 			this.actionsNotebook.Add (this.viewTransactionWidget);
-			global::Gtk.Notebook.NotebookChild w4 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook[this.viewTransactionWidget]));
+			global::Gtk.Notebook.NotebookChild w4 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook [this.viewTransactionWidget]));
 			w4.Position = 3;
 			// Notebook tab
 			this.viewTransactionPageLabel = new global::Gtk.Label ();
@@ -97,7 +85,7 @@ namespace LiqPayDemo
 			this.phoneCreditWidget.Events = ((global::Gdk.EventMask)(256));
 			this.phoneCreditWidget.Name = "phoneCreditWidget";
 			this.actionsNotebook.Add (this.phoneCreditWidget);
-			global::Gtk.Notebook.NotebookChild w5 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook[this.phoneCreditWidget]));
+			global::Gtk.Notebook.NotebookChild w5 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook [this.phoneCreditWidget]));
 			w5.Position = 4;
 			// Notebook tab
 			this.phoneCreditLabel = new global::Gtk.Label ();
@@ -110,7 +98,7 @@ namespace LiqPayDemo
 			this.clicknbuyWidget.Events = ((global::Gdk.EventMask)(256));
 			this.clicknbuyWidget.Name = "clicknbuyWidget";
 			this.actionsNotebook.Add (this.clicknbuyWidget);
-			global::Gtk.Notebook.NotebookChild w6 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook[this.clicknbuyWidget]));
+			global::Gtk.Notebook.NotebookChild w6 = ((global::Gtk.Notebook.NotebookChild)(this.actionsNotebook [this.clicknbuyWidget]));
 			w6.Position = 5;
 			// Notebook tab
 			this.clicknbuyLabel = new global::Gtk.Label ();
